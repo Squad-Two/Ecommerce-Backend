@@ -1,8 +1,8 @@
 'use strict';
 require('dotenv').load();
-const s3Upload = require('../lib/aws-s3-monster');
+const s3Upload = require('../lib/aws-s3-print');
 const mongoose = require('../app/middleware/mongoose');
-const Monster = require('../app/models/monster');
+const Print = require('../app/models/print');
 const mime = require('mime');
 
 let file  = {
@@ -18,7 +18,7 @@ file.originalname = file.path;
 
 s3Upload(file)
   .then((s3response) =>
-  Monster.create({
+  Print.create({
     url: s3response.Location,
     name: file.name,
     description: file.description,

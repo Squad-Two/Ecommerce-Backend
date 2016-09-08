@@ -1,6 +1,6 @@
 'use strict';
 
-const debug = require('debug')('ecommerce-back:error-handler');
+const debug = require('debug')('Ecommerce-Backend:error-handler');
 
 const errorHandler = (err, req, res, next) => {
   //jshint unused:false

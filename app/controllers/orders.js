@@ -56,14 +56,14 @@ const showUserOrders = (req, res, next) => {
 
 
 // working on it
-// const createCharge = (req, res, next) => {
-//  stripe.charges.create({
-//    amount: req.body.amount,
-//    currency: "usd",
-//    source: req.body.stripeToken,
-//  }).then(charge => res.json({ charge }))
-//  .catch(err => next(err));
-// };
+const createCharge = (req, res, next) => {
+ stripe.charges.create({
+   amount: req.body.amount,
+   currency: "usd",
+   source: req.body.stripeToken,
+ }).then(charge => res.json({ charge }))
+ .catch(err => next(err));
+};
 
 
 
@@ -103,7 +103,7 @@ module.exports = controller({
   update,
   destroy,
   showUserOrders,
-  // createCharge
+  createCharge
 }, { before: [
   { method: authenticate, except: ['index', 'show'] },
 ], });

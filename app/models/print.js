@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-const monsterSchema = new mongoose.Schema({
+const printSchema = new mongoose.Schema({
     url: {
       type: String,
       required: true
@@ -24,6 +24,6 @@ const monsterSchema = new mongoose.Schema({
 });
 
 
-const Monster = mongoose.model('Monster', monsterSchema);
+const Print = mongoose.model('Print', printSchema);
 
-module.exports = Monster;
+module.exports = Print;

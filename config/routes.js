@@ -10,11 +10,10 @@ module.exports = require('lib/wiring/routes')
 // standards RESTful routes
 .resources('examples')
 
-//cart routes
-.resources('carts')
+
 .resources('orders')
 .resources('charge')
-.resources('monsters')
+.resources('prints')
 
 
 .get('/owner_orders/:owner', 'orders#index')
