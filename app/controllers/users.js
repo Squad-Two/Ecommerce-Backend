@@ -9,7 +9,7 @@ const User = models.user;
 const crypto = require('crypto');
 
 // added so user can change password
-// const authenticate = require('./concerns/authenticate');
+const authenticate = require('./concerns/authenticate');
 
 const HttpError = require('lib/wiring/http-error');
 
@@ -120,5 +120,5 @@ module.exports = controller({
   signout,
   changepw,
 }, { before: [
-  // { method: authenticate, except: ['signup', 'signin'] },
+  { method: authenticate, except: ['signup', 'signin'] },
 ], });
