@@ -12,7 +12,7 @@ module.exports = require('lib/wiring/routes')
 
 
 .resources('orders')
-.resources('charge')
+// .resources('charge')
 .resources('prints')
 
 
