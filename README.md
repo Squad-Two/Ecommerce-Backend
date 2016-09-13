@@ -14,8 +14,8 @@ We created a e-commerce website that sells art prints. The idea behind it was to
 
 # Time Table
 
-wireframes/user-stories
-Backend (Express.js)
-AWS S3
-Frontend (HTML, CSS, Bootstrap, jQuery)
-AJAX
+- wireframes/user-stories
+- Backend (Express.js)
+- AWS S3
+- Frontend (HTML, CSS, Bootstrap, jQuery)
+- AJAX
